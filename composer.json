@@ -1,0 +1,26 @@
+{
+  "name": "starbug/http",
+  "description": "Simple abstractions for handling incoming HTTP requests and generating a response.",
+  "authors": [
+    {
+      "name": "Ali Gangji",
+      "homepage": "https://github.com/cogentParadigm"
+    }
+  ],
+  "config": {
+    "platform": {
+      "php": "7.1"
+    }
+  },
+  "require": {
+    "starbug/bundle": "^1.0"
+  },
+  "require-dev": {
+    "starbug/devel": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Starbug\\Http\\": "src/"
+    }
+  }
+}

@@ -133,11 +133,11 @@ interface RequestInterface {
   /**
    * Undocumented function
    *
-   * @param string $post
+   * @param mixed $post
    *
    * @return boolean
    */
-  public function hasPost(string $post);
+  public function hasPost($post);
 
   /**
    * Undocumented function

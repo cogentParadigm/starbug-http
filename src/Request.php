@@ -30,24 +30,24 @@ class Request implements RequestInterface {
   public function getUrl() {
     return $this->url;
   }
-  public function setPath($path) {
+  public function setPath(string $path) {
     $this->url->setPath($path);
     return $this;
   }
   public function getPath() {
     return $this->url->getPath();
   }
-  public function setParameter($name, $value) {
+  public function setParameter(string $name, $value) {
     $this->url->setParameter($name, $value);
     return $this;
   }
-  public function hasParameter($name) {
+  public function hasParameter(string $name) {
     return $this->url->hasParameter($name);
   }
-  public function getParameter($name) {
+  public function getParameter(string $name) {
     return $this->url->getParameter($name);
   }
-  public function setParameters($parameters) {
+  public function setParameters(array $parameters) {
     $this->url->setParameters($parameters);
     return $this;
   }
@@ -57,13 +57,13 @@ class Request implements RequestInterface {
   public function getFormat() {
     return $this->url->getFormat();
   }
-  public function getComponent($index = 0) {
+  public function getComponent(int $index = 0) {
     return $this->url->getComponent($index);
   }
   public function getComponents() {
     return $this->url->getComponents();
   }
-  public function setLanguage($language) {
+  public function setLanguage(string $language) {
     $this->language = $language;
     return $this;
   }
@@ -83,35 +83,35 @@ class Request implements RequestInterface {
     $args = func_get_args();
     return call_user_func_array([$this->post, 'has'], $args);
   }
-  public function setHeader($header, $value) {
+  public function setHeader(string $header, string $value) {
     $this->headers->set($header, $value);
     return $this;
   }
-  public function setHeaders($headers = []) {
+  public function setHeaders(array $headers = []) {
     $this->headers->set($headers);
     return $this;
   }
   public function getHeaders() {
     return $this->headers;
   }
-  public function getHeader($name) {
+  public function getHeader(string $name) {
     return $this->headers->get($name);
   }
-  public function setFiles($files) {
+  public function setFiles(array $files) {
     $this->files->set($files);
     return $this;
   }
   public function getFiles() {
     return $this->files;
   }
-  public function setCookie($name, $value) {
+  public function setCookie(string $name, string $value) {
     $this->cookies->set($name, $value);
     return $this;
   }
-  public function getCookie($name) {
+  public function getCookie(string $name) {
     return $this->cookies->get($name);
   }
-  public function setCookies($cookies = []) {
+  public function setCookies(array $cookies = []) {
     $this->cookies->set($cookies);
     return $this;
   }

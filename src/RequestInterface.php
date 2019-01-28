@@ -117,11 +117,11 @@ interface RequestInterface {
   /**
    * Undocumented function
    *
-   * @param array $post
+   * @param string $post
    *
    * @return $this This instance so setters are chainable.
    */
-  public function setPost(array $post);
+  public function setPost($post);
 
   /**
    * Undocumented function
@@ -194,11 +194,11 @@ interface RequestInterface {
    * Set cookie by name.
    *
    * @param string $name The name of the cookie.
-   * @param array $value The cookie properties.
+   * @param string $value The cookie properties.
    *
    * @return $this This instance so setters are chainable.
    */
-  public function setCookie(string $name, array $value);
+  public function setCookie(string $name, string $value);
 
   /**
    * Get cookie by name.

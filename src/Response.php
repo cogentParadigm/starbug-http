@@ -2,6 +2,7 @@
 namespace Starbug\Http;
 
 use Starbug\Bundle\Bundle;
+use Starbug\Core\TemplateInterface;
 
 /**
  * The default implementation of ResponseInterface.
@@ -48,53 +49,53 @@ class Response implements ResponseInterface {
   public function getHeaders() {
     return $this->headers;
   }
-  public function setHeaders($headers = []) {
+  public function setHeaders(array $headers = []) {
     foreach ($headers as $name => $value) {
       $this->setHeader($name, $value);
     }
     return $this;
   }
-  public function getHeader($name) {
+  public function getHeader(string $name) {
     return $this->headers->get($name);
   }
-  public function setHeader($name, $value = null) {
+  public function setHeader(string $name, $value = null) {
     $this->headers->set($name, $value);
     return $this;
   }
   public function getCookies() {
     return $this->cookies;
   }
-  public function setCookies($cookies = []) {
+  public function setCookies(array $cookies = []) {
     foreach ($cookies as $name => $value) {
       $this->setCookie($name, $value);
     }
     return $this;
   }
-  public function getCookie($name) {
+  public function getCookie(string $name) {
     return $this->cookies->get($name);
   }
-  public function setCookie($name, $value = null) {
+  public function setCookie(string $name, $value = null) {
     $this->cookies->set($name, $value);
     return $this;
   }
   public function getCode() {
     return $this->code;
   }
-  public function setCode($code) {
+  public function setCode(int $code) {
     $this->code = $code;
     return $this;
   }
   public function getContentType() {
     return $this->content_type;
   }
-  public function setContentType($type) {
+  public function setContentType(string $type) {
     $this->content_type = $type;
     return $this;
   }
   public function getCharset() {
     return $this->charset;
   }
-  public function setCharset($charset) {
+  public function setCharset(string $charset) {
     $this->charset = $charset;
     return $this;
   }

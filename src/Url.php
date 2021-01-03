@@ -26,6 +26,7 @@ class Url implements UrlInterface {
    * @param string $base_directory An optional base directory. The root directory ('/') is the default value.
    */
   public function __construct(string $host = "", string $base_directory = "/") {
+    trigger_error("This class is deprecated", E_USER_DEPRECATED);
     $this->host = $host;
     $this->dir = $base_directory;
   }

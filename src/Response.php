@@ -39,6 +39,7 @@ class Response implements ResponseInterface {
   protected $output;
 
   public function __construct(TemplateInterface $output, $status_code = 200, $headers = [], $parameters = []) {
+    trigger_error("This class is deprecated", E_USER_DEPRECATED);
     $this->output = $output;
     $this->code = $status_code;
     $this->headers = new Bundle($headers);

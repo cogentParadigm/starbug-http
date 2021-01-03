@@ -1,18 +1,15 @@
 {
   "name": "starbug/http",
-  "description": "Simple abstractions for handling incoming HTTP requests and generating a response.",
+  "description": "Basic HTTP message components.",
+  "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "Ali Gangji",
       "homepage": "https://github.com/cogentParadigm"
     }
   ],
-  "config": {
-    "platform": {
-      "php": "7.1"
-    }
-  },
   "require": {
+    "guzzlehttp/psr7": "^1.7",
     "starbug/bundle": "^1.0"
   },
   "require-dev": {

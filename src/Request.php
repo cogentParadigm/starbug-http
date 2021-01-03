@@ -15,6 +15,7 @@ class Request implements RequestInterface {
   protected $cookies;
 
   public function __construct(UrlInterface $url) {
+    trigger_error("This class is deprecated", E_USER_DEPRECATED);
     $this->post = new Bundle();
     $this->headers = new Bundle();
     $this->files = new Bundle();

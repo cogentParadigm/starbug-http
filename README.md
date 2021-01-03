@@ -1,5 +1,6 @@
 # HTTP
 
-A simple HTTP request/response abstraction layer.
+PSR-7 based HTTP message layer.
 
-This package is designed as a simple abstraction for server applications that need to handle a request and return a response. It is not intended for performing client requests.
+Actual PSR-7 implementation provided by Guzzle. This library just adds UriBuilder and ResponseBuilder.
+The rest of the classes are deprecated by the introduction of PSR-7.  

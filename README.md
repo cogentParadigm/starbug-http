@@ -1,6 +1,16 @@
 # HTTP
 
-PSR-7 based HTTP message layer.
+PSR-7 and PSR-15 based HTTP message layer.
 
-Actual PSR-7 implementation provided by Guzzle. This library just adds UriBuilder and ResponseBuilder.
-The rest of the classes are deprecated by the introduction of PSR-7.  
+This package brings together implementations of PSR-7 and PSR-15 along with additional tooling
+such as a PSR-7 Response emitter and a Uri building utility.
+
+# What's included
+
+- psr/http-message PSR-7 interfaces
+- psr/http-server-middleware PSR-15 interfaces
+- guzzlehttp/psr7 PSR-7 implementation
+- oscarotero/middleland - PSR-15 implementation
+- laminas/laminas-httphandlerrunner - PSR-7 Response emitter
+- ResponseBuilderInterface - PSR-7 Response builder
+- UriBuilderInterface - PSR-7 Uri builder

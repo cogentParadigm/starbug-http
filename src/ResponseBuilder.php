@@ -57,9 +57,6 @@ class ResponseBuilder implements ResponseBuilderInterface {
     return $this;
   }
   public function create($status = 200, $headers = []) {
-    if (!isset($headers["Cache-Control"])) {
-      $headers["Cache-Control"] = "no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0";
-    }
     $this->response = new Response($status, $headers);
     return $this;
   }

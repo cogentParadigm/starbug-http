@@ -63,9 +63,9 @@ class ResponseBuilder implements ResponseBuilderInterface {
     $this->response = new Response($status, $headers);
     return $this;
   }
-  public function redirect($path, $status = 302) {
+  public function redirect($path, $status = 302): ResponseInterface {
     $url = (string) $this->uri->build($path, true);
     $this->create($status, ["Location" => $url]);
-    $this->setContent('<script>setTimeout("location.href = \''.$url.'\';");</script>');
+    return $this->getResponse();
   }
 }

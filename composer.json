@@ -17,7 +17,8 @@
     "laminas/laminas-httphandlerrunner": "^1.2",
     "starbug/bundle": "^1.0",
     "middlewares/https": "^2.0",
-    "http-interop/http-factory-guzzle": "^1.0"
+    "http-interop/http-factory-guzzle": "^1.0",
+    "middlewares/cache": "^2.1"
   },
   "require-dev": {
     "starbug/devel": "^1.0"

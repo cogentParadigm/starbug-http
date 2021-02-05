@@ -18,7 +18,8 @@
     "starbug/bundle": "^1.0",
     "middlewares/https": "^2.0",
     "http-interop/http-factory-guzzle": "^1.0",
-    "middlewares/cache": "^2.1"
+    "middlewares/cache": "^2.1",
+    "middlewares/payload": "^3.0"
   },
   "require-dev": {
     "starbug/devel": "^1.0"

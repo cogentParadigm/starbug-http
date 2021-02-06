@@ -47,7 +47,7 @@ class BaseUrlMiddleware implements MiddlewareInterface {
    */
   protected function redirectWithBaseUrl(ResponseInterface $response): ResponseInterface {
     $location = $response->getHeaderLine("Location");
-    if ($location !== "" && Uri::isRelativePathReference(new Uri($location))) {
+    if ($response->hasHeader("Location") && Uri::isRelativePathReference(new Uri($location))) {
       return $response->withHeader("Location", $this->baseUrl . $location);
     }
     return $response;

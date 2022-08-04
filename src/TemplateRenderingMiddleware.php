@@ -36,7 +36,7 @@ class TemplateRenderingMiddleware implements MiddlewareInterface {
     $options = $response->getOptions();
     $content = $this->templates->capture($contentTemplate, $params, $options);
     if ($pageTemplate) {
-      $bodyStream = Utils::streamFor($this->templates->capture($pageTemplate, ["content" => $content]));
+      $bodyStream = Utils::streamFor($this->templates->capture($pageTemplate, ["content" => $content] + $params));
     } else {
       $bodyStream = Utils::streamFor($content);
     }

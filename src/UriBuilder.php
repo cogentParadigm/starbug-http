@@ -69,8 +69,8 @@ class UriBuilder implements UriBuilderInterface {
       $uri = new Uri($uri);
     }
     if (!($absolute || $this->absolute)) {
-      $base = $base->withScheme('')->withHost('');
-      $uri = $uri->withScheme('')->withHost('');
+      $base = $base->withScheme('')->withHost('')->withPort(null);
+      $uri = $uri->withScheme('')->withHost('')->withPort(null);
     }
     return UriResolver::resolve($base, $uri);
   }

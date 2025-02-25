@@ -168,6 +168,9 @@ class Url implements UrlInterface {
    * @return string The component at the specified index.
    */
   public function getComponent(int $index = 0) {
+    if (!isset($this->components[$index])) {
+      return null;
+    }
     return $this->components[$index];
   }
 
@@ -281,6 +284,9 @@ class Url implements UrlInterface {
    * @return mixed The parameter value.
    */
   public function getParameter(string $name) {
+    if (!isset($this->parameters[$name])) {
+      return null;
+    }
     return $this->parameters[$name];
   }
 
